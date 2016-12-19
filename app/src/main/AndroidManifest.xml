@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.com.silence.xposeddemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--xposed 模块-->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true"
+            />
+        <!-- 模块描述-->
+        <meta-data
+            android:name="xposeddescription"
+            android:value="登录劫持的样例"
+            />
+        <!-- 最低版本号-->
+        <meta-data
+            android:name="xposedminversion"
+            android:value="40"
+            />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
